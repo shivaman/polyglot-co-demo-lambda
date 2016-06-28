@@ -60,7 +60,8 @@ function fetchNextDayForecasts(forecastIoApiKey, locations) {
 }
 
 function forecastUrl(apiKey, lat, lng) {
-  return `https://api.forecast.io/forecast/${apiKey}/${lat},${lng}?units=ca&exclude=currently,minutely,hourly,alerts,flags`
+ // return `https://api.forecast.io/forecast/${apiKey}/${lat},${lng}?units=ca&exclude=currently,minutely,hourly,alerts,flags`
+  return `https://api.forecast.io/forecast/${apiKey}/${lat},${lng}?exclude=currently,minutely,hourly,alerts,flags`
 }
 
 function buildNumber() {
