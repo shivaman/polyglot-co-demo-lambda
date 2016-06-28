@@ -9,7 +9,7 @@ exports.handle = (e, ctx, cb) => {
 
   const apiKey = process.env.FORECAST_API_KEY || cb("process.env.FORECAST_API_KEY missing");
 
-  // Default to Melbourne, Australia
+  // Defaults to Melbourne, Australia
   const locations = e.locations || [{lat:"-37.8162789",lng:"144.9642459",name:"Melbourne"}];
 
   Promise.all(fetchNextDayForecasts(apiKey, locations))
