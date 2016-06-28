@@ -8,8 +8,8 @@ const fetchMock = require('fetch-mock');
 const fetchWeather = require('./index').handle;
 
 function mockForecastIo(lat, lng, response) {
-  //fetchMock.mock(`https://api.forecast.io/forecast/test-forecast-io-key/${lat},${lng}?units=ca&exclude=currently,minutely,hourly,alerts,flags`, 'GET', response)
-  fetchMock.mock(`https://api.forecast.io/forecast/test-forecast-io-key/${lat},${lng}?exclude=currently,minutely,hourly,alerts,flags`, 'GET', response)
+  fetchMock.mock(`https://api.forecast.io/forecast/test-forecast-io-key/${lat},${lng}?units=ca&exclude=currently,minutely,hourly,alerts,flags`, 'GET', response)
+  //fetchMock.mock(`https://api.forecast.io/forecast/test-forecast-io-key/${lat},${lng}?exclude=currently,minutely,hourly,alerts,flags`, 'GET', response)
 }
 
 describe('fetchWeather', function() {
